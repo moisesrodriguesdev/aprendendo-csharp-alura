@@ -1,0 +1,7 @@
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\2-CriandoVariaveis\2-CriandoVariaveis\bin\Debug\2-CriandoVariaveis.exe.config
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\2-CriandoVariaveis\2-CriandoVariaveis\bin\Debug\2-CriandoVariaveis.exe
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\2-CriandoVariaveis\2-CriandoVariaveis\bin\Debug\2-CriandoVariaveis.pdb
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\2-CriandoVariaveis\2-CriandoVariaveis\obj\Debug\2-CriandoVariaveis.csprojAssemblyReference.cache
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\2-CriandoVariaveis\2-CriandoVariaveis\obj\Debug\2-CriandoVariaveis.csproj.CoreCompileInputs.cache
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\2-CriandoVariaveis\2-CriandoVariaveis\obj\Debug\2-CriandoVariaveis.exe
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\2-CriandoVariaveis\2-CriandoVariaveis\obj\Debug\2-CriandoVariaveis.pdb
