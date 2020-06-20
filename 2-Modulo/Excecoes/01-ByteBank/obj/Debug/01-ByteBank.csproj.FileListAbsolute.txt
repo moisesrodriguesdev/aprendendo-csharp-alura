@@ -1,0 +1,14 @@
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\ByteBank\01-ByteBank\bin\Debug\01-ByteBank.exe.config
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\ByteBank\01-ByteBank\bin\Debug\01-ByteBank.exe
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\ByteBank\01-ByteBank\bin\Debug\01-ByteBank.pdb
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\ByteBank\01-ByteBank\obj\Debug\01-ByteBank.csprojAssemblyReference.cache
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\ByteBank\01-ByteBank\obj\Debug\01-ByteBank.csproj.CoreCompileInputs.cache
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\ByteBank\01-ByteBank\obj\Debug\01-ByteBank.exe
+C:\www\APRENDENDO CSHARP - ALURA\1-Modulo\ByteBank\01-ByteBank\obj\Debug\01-ByteBank.pdb
+C:\www\ESTUDO C#\aprendendo-csharp-alura\2-Modulo\Excecoes\01-ByteBank\obj\Debug\01-ByteBank.csprojAssemblyReference.cache
+C:\www\ESTUDO C#\aprendendo-csharp-alura\2-Modulo\Excecoes\01-ByteBank\obj\Debug\01-ByteBank.csproj.CoreCompileInputs.cache
+C:\www\ESTUDO C#\aprendendo-csharp-alura\2-Modulo\Excecoes\01-ByteBank\obj\Debug\01-ByteBank.exe
+C:\www\ESTUDO C#\aprendendo-csharp-alura\2-Modulo\Excecoes\01-ByteBank\obj\Debug\01-ByteBank.pdb
+C:\www\ESTUDO C#\aprendendo-csharp-alura\2-Modulo\Excecoes\01-ByteBank\bin\Debug\01-ByteBank.exe.config
+C:\www\ESTUDO C#\aprendendo-csharp-alura\2-Modulo\Excecoes\01-ByteBank\bin\Debug\01-ByteBank.exe
+C:\www\ESTUDO C#\aprendendo-csharp-alura\2-Modulo\Excecoes\01-ByteBank\bin\Debug\01-ByteBank.pdb
