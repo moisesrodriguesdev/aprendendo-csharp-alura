@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _01_ByteBank.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,14 +10,19 @@ namespace _01_ByteBank
     public class ContaCorrente
     {
         public  Cliente Titular { get; set; }
-        private int Agencia { get; set; } 
-        private int Numero { get; set; }    
+
+        private int Agencia { get; } 
+
+        private int Numero { get; }    
         private double _saldo;
 
         public static double TaxaOperacao;
 
         // Propriedade que pertence somente a classe, todos os objetos compartilham dessa informação
         public static int TotalDeContasCriadas {  get; private set; }
+
+        public int CountWithdrawalsNotAllowed { get; private set; }
+        public int CountTransferNotAllowed { get; private set; }
 
         public double Saldo
         {
@@ -34,31 +40,49 @@ namespace _01_ByteBank
                 _saldo = value;
             }
         }
+        public ContaCorrente(int NumeroAgencia, int NumeroConta)
+        {
+
+            if (NumeroAgencia <= 0)
+            {
+                throw new ArgumentException("Agencia deve ser maior que 0", nameof(NumeroAgencia));
+            }
+
+
+            if (NumeroConta <= 0)
+            {
+                throw new ArgumentException("Numero deve ser maior que 0", nameof(NumeroConta));
+            }
+
+            Agencia = NumeroAgencia;
+            Numero = NumeroConta;
+
+            TotalDeContasCriadas++;
+            TaxaOperacao = 30 / TotalDeContasCriadas;
+
+        }
 
         public static int GetTotalDeContasCriadas()
         {
             return TotalDeContasCriadas;
         }
 
-        public ContaCorrente(int agencia, int numero)
-        {
-            Agencia = agencia;
-            Numero = numero;
-            
-            TaxaOperacao = 30 / TotalDeContasCriadas;
 
-            TotalDeContasCriadas++;
-        }
-
-        public bool Withdraw(Double value) 
+        public void Withdraw(Double value) 
         {
+            if (value < 0)
+            {
+                throw new ArgumentException("Valor inválido para o saque", nameof(value));
+            }
+
             if (_saldo < value)
             {
-                return false;
+                CountWithdrawalsNotAllowed++;
+                throw new InsufficientFundsException(Saldo, value);
             }
 
             _saldo -= value;
-            return true;
+            
         }
 
         public void Deposit(Double value)
@@ -66,16 +90,25 @@ namespace _01_ByteBank
             _saldo += value;
         }
 
-        public bool Transfer(double value, ContaCorrente destinyAccount)
+        public void Transfer(double value, ContaCorrente destinyAccount)
         {
-            if (_saldo < value)
+            if (value < 0)
             {
-                return false;
+                throw new ArgumentException("Valor inválido para transferir", nameof(value));
             }
 
-            _saldo -= value;
+            try
+            {
+                Withdraw(value);
+            }
+            catch(InsufficientFundsException ex)
+            {
+                CountTransferNotAllowed++;
+                throw new FinancialOperationException("Operação não realizada", ex);
+            }
+            
             destinyAccount.Deposit(value);
-            return true;
+            
         }
     }
 }
